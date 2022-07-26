@@ -13,7 +13,7 @@
         </a>
         &nbsp
             {% if article.type == 'a' %}
-            &nbsp Category:
+            &nbsp bookmark:
              <a href="{{ article.category.get_absolute_url }}" rel="category tag">{{ article.category.name }}</a>
                  
                 {% if article.tags.all %}

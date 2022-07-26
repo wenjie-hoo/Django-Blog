@@ -39,7 +39,7 @@ def datetimeformat(data):
     except Exception as e:
         logger.error(e)
         return ""
-
+    
 
 @register.filter()
 @stringfilter
