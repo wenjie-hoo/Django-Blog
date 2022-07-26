@@ -105,6 +105,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoblog',
+<<<<<<< HEAD
         'USER': 'djangoblog',
         'PASSWORD': 'Hwj_120797',
         'HOST': 'localhost',
@@ -112,6 +113,15 @@ DATABASES = {
         'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
+=======
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+        'OPTIONS': {
+            'charset': 'utf8mb4'},
+    }}
+>>>>>>> 530859c56e3bc2ce452834db3bfbb3399eb1bf3d
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators

@@ -11,27 +11,44 @@
                   datetime="{{ article.pub_time }}">
                 {% datetimeformat article.pub_time %}</time>
         </a>
+        &nbsp
             {% if article.type == 'a' %}
+<<<<<<< HEAD
             &nbsp Category:
              <a href="{{ article.category.get_absolute_url }}" rel="category tag">{{ article.category.name }}</a>
                  
                 {% if article.tags.all %}
                 &nbsp Tag:
+=======
+                <a href="{{ article.category.get_absolute_url }}" rel="category tag">{{ article.category.name }}</a>
+                Sort
+                &nbsp
+                {% if article.tags.all %}
+                    Tag:
+
+>>>>>>> 530859c56e3bc2ce452834db3bfbb3399eb1bf3d
                     {% for t in article.tags.all %}
                         <a href="{{ t.get_absolute_url }}" rel="tag">{{ t.name }}</a>
                         {% if t != article.tags.all.last %}
-                            ，
+                        &nbsp       
                         {% endif %}
                     {% endfor %}
+<<<<<<< HEAD
 
 
 
                 {% endif %}
             {% endif %}
             <span class="by-author"> &nbsp Author:
+=======
+                {% endif %}
+            {% endif %}
+            &nbsp
+            <span class="by-author">Author:
+>>>>>>> 530859c56e3bc2ce452834db3bfbb3399eb1bf3d
         <span class="author vcard">
             <a class="url fn n" href="{{ article.author.get_absolute_url }}"
-               title="查看所有由{{ article.author.username }}发布的文章"
+               title="posted by{{ article.author.username }}"
                rel="author">
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
 
@@ -40,8 +57,13 @@
             {{ article.author.username }}
         </span>
             </span>
+<<<<<<< HEAD
     </a>&nbsp
         </span>
+=======
+    </a>
+        </span> &nbsp
+>>>>>>> 530859c56e3bc2ce452834db3bfbb3399eb1bf3d
                 {% if user.is_superuser %}
                     <a href="{{ article.get_admin_url }}">Edit</a>
                 {% endif %}
