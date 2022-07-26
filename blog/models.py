@@ -72,7 +72,7 @@ class Article(BaseModel):
         ('p', '页面'),
     )
     title = models.CharField('标题', max_length=200, unique=True)
-    body = MDTextField('正文')
+    body = MDTextField('正文xx')
     pub_time = models.DateTimeField(
         '发布时间', blank=False, null=False, default=now)
     status = models.CharField(

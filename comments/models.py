@@ -8,7 +8,7 @@ from blog.models import Article
 # Create your models here.
 
 class Comment(models.Model):
-    body = models.TextField('正文', max_length=300)
+    body = models.TextField('your reply', max_length=300)
     created_time = models.DateTimeField('创建时间', default=now)
     last_mod_time = models.DateTimeField('修改时间', default=now)
     author = models.ForeignKey(
